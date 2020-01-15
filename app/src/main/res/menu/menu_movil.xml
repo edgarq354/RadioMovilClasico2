@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:id="@+id/voy_en_camino"
+            android:orderInCategory="100"
+            android:title="Ok voy en camino"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/estamos_esperando"
+            android:orderInCategory="100"
+            android:title="Lo estamos esperando"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/llameme"
+            android:orderInCategory="100"
+            android:title="Llámeme"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/qr_conductor"
+            android:orderInCategory="100"
+            android:title="QR Conductor"
+            app:showAsAction="never" />
+        <item
+            android:id="@+id/qr_vehiculo"
+            android:orderInCategory="100"
+            android:title="QR Vehiculo"
+            app:showAsAction="never" />
+
+
+        <item android:title="COMUNICATE CON EL CONDUCTOR"
+            >
+                <menu>
+                        <item
+                            android:id="@+id/it_llamada_conductor"
+                            android:icon="@mipmap/ic_celular"
+                            android:title="LLAMADA" />
+                        <item
+                            android:id="@+id/it_mensaje_conductor"
+                            android:icon="@mipmap/ic_mensaje"
+                            android:title="MENSAJE" />
+
+                        <item
+                            android:id="@+id/it_whatsapp_conductor"
+                            android:icon="@mipmap/ic_whatsapp"
+                            android:title="WHATSAPP" />
+                        <item
+                            android:id="@+id/it_skype_conductor"
+                            android:icon="@mipmap/ic_skype"
+                            android:title="SKYPE" />
+
+                </menu>
+        </item>
+
+</menu>

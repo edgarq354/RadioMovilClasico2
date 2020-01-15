@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".perfil.Compartir_amigo"
+    tools:showIn="@layout/activity_compartir_amigo"
+    android:orientation="vertical"
+    android:padding="15sp"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Quieres compartir tu codigo con tus amigos?"
+        android:textSize="30sp"
+        android:textColor="@color/colorIcons"
+        android:layout_margin="5sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/informacion_compartir"
+       android:padding="5sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Cómo funciona las invitaciones?"
+        android:textColor="@color/colorPrimaryDark"
+        android:padding="15sp"
+        android:background="@drawable/disenio"
+        android:id="@+id/tv_como_funciona"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15sp"
+        android:textSize="30sp"
+        android:text=""
+        android:hint="Codigo"
+        android:longClickable="true"
+        android:id="@+id/tv_codigo"
+        android:background="@drawable/boton_normal5"
+
+        />
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_otra_direccion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiotaxi_lacarroza.tarifario.Tarifa"
+    tools:showIn="@layout/activity_tarifa">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ubicacion"
+        android:text="dato"
+        />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.grayhartcorp.quevengan.Menu_p"
+
+        />
+
+
+
+    <ImageView
+        android:id="@+id/map_custom_marker"
+        android:layout_width="30pt"
+        android:layout_height="30pt"
+        android:layout_gravity="center"
+        android:background="@mipmap/ic_punto_fin_1"
+        android:layout_marginBottom="13pt"
+        android:visibility="visible"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center|bottom"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:padding="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/presentacion"
+            android:id="@+id/ll_ubicacion_final"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_punto_fin_1"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UBICACIÓN FINAL"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/tv_ubicacion_final"
+                android:layout_margin="5sp"
+                style="@style/TextAppearance.AppCompat.Button"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5sp"
+        >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_direccion_buscar"
+        android:padding="10sp"
+        >
+        <TextView
+            android:id="@+id/tv_direccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:singleLine="true"
+            android:background="@drawable/edit_text_style"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="9dp"
+            android:textColor="@android:color/primary_text_light"
+            android:text=""
+            android:gravity="center|left"
+            android:textSize="18sp"
+            />
+
+    </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

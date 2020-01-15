@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_iniciar_sesion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="7sp"
+    android:orientation="vertical"
+    tools:context="com.elisoft.radiomovilclasico.registro_inicio_sesion.Iniciar_sesion">
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        android:layout_margin="16sp"
+        >
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_nombre"
+
+                    />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorAccent"
+                    app:errorTextAppearance="@style/Error">
+
+                    <EditText
+                        android:id="@+id/et_codigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Usuario"
+                        android:maxLength="10"
+                        android:imeOptions="actionNext"
+                        android:inputType="textCapCharacters"
+
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_candado"
+                    />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorAccent"
+                    android:layout_weight="1"
+                    >
+
+                    <EditText
+                        android:id="@+id/et_contrasenia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Contraseña"
+                        android:imeActionLabel="Contraseña"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+
+                        android:singleLine="true" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2sp"
+                android:layout_marginBottom="5sp"
+                android:background="@color/colorPrimary"                />
+
+
+            <com.facebook.widget.LoginButton
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5sp"
+                android:padding="20sp"
+                style="@style/FacebookLoginButton"
+                />
+            <com.google.android.gms.common.SignInButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bt_google"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/condiciones"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/tv_condiciones"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="30sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_margin="0sp"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25sp"
+            android:text="Registrate en Radio Movil Clasico"
+            android:padding="1sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            style="@style/submit3"
+            android:id="@+id/tv_registrate"
+            android:layout_weight="1"
+            android:layout_margin="0sp"
+
+            />
+
+
+<!--
+        <Button
+            android:text="Iniciar sesion Taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/iniciar_movil"
+            style="@style/submit2"
+            />
+-->
+
+    </LinearLayout>
+</FrameLayout>

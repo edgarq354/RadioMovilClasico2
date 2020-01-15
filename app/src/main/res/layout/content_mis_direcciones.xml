@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".perfil.Mis_direcciones"
+    tools:showIn="@layout/activity_mis_direcciones"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favoritos"
+            android:layout_margin="15sp"
+            android:textColor="@color/colorIcons"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/disenio"
+            android:layout_margin="2sp"
+            android:id="@+id/ll_casa"
+            >
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginTop="5sp"
+                android:background="@mipmap/ic_casa"
+
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="9dp"
+                    android:singleLine="true"
+                    android:gravity="left|center"
+                    android:textColor="@color/colorIcons"
+                    android:id="@+id/tv_direccion_casa"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:text="Casa"
+
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="9dp"
+                    android:singleLine="true"
+                    android:gravity="left|center"
+                    android:text="Dirección de Casa"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_casa"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="2sp"
+            android:padding="5sp"
+            android:background="@drawable/disenio"
+            android:id="@+id/ll_trabajo"
+            >
+            <ImageView
+
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:layout_marginTop="5sp"
+                android:background="@mipmap/ic_trabajo"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_height="50sp"
+                android:layout_weight="1"
+
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="9dp"
+                    android:singleLine="true"
+                    android:gravity="left|center"
+                    android:textColor="@color/colorIcons"
+                    android:id="@+id/tv_direccion_trabajo"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:text="Trabajo"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="9dp"
+                    android:singleLine="true"
+                    android:gravity="left|center"
+                    android:text="Dirección de Trabajo"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_trabajo"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5sp"
+           android:background="#000"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Otras Ubicaciones guardadas"
+            android:layout_margin="15sp"
+            android:textColor="@color/colorIcons"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lv_direccion"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textFilterEnabled="false"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentLeft="false"
+            >
+
+        </ListView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+android:id="@+id/ll_agregar_direccion"
+            android:layout_margin="2sp"
+            android:padding="5sp"
+            android:background="@drawable/disenio"
+            >
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="9dp"
+                    android:singleLine="true"
+                    android:gravity="left|center"
+                    android:textColor="@color/colorIcons"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:text="Agregar a Ubicaciones guardadas"
+                    android:layout_weight="1"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="9dp"
+                    android:singleLine="true"
+                    android:gravity="left|center"
+                    android:text="Llega más rapido a tus destinos favoritos"
+                    android:layout_weight="1"
+                    />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

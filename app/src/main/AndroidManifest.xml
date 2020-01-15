@@ -2,20 +2,487 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.elisoft.radiomovilclasico">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name=".RadioMovilClasico"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/ic_logo_app"
+        android:label="Radio Movil Clasico (taxi)"
+        android:largeHeap="true"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <uses-library android:name="com.google.android.maps" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".Menu_usuario"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Inicio"
+            android:label="Registrate con Facebook"
+            android:screenOrientation="portrait" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service
+            android:name=".Servicio_pedido"
+            android:enabled="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".Servicio_descargar_imagen_perfil"
+            android:enabled="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <service android:name=".notificaciones.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".notificaciones.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".Pedido_usuario"
+            android:label="MI PEDIDO"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".informacion.Informacion"
+            android:label="Información" />
+        <activity
+            android:name=".perfil.Modificar_contrasenia"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Registrar_nombre_completo"
+            android:label="Registrar Usuario" />
+        <activity
+            android:name=".Registrar_usuario_facebook"
+            android:label="@string/title_activity_registrar_usuario_facebook"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".actualizacion"
+            android:label="Actualización"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registro_inicio_sesion.Animacion"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Buscador.PlacesAutoCompleteActivity"
+            android:label="DIRECCION"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Registrar_nombre" />
+        <activity android:name=".Registrar_login" />
+        <activity
+            android:name=".registro_inicio_sesion.Iniciar_sesion"
+            android:label="Iniciar sesión"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Pedido_perfil_taxi"
+            android:label="Perfil del Conductor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".historial_notificacion.Notificacion"
+            android:label="Notificación" />
+        <activity
+            android:name=".Datos_de_pedido"
+            android:label="PEDIR TAXI"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Cancelar_pedido_usuario"
+            android:label="Cancelar el pedido" />
+        <activity
+            android:name=".menu_otra_direccion.Otra_direccion"
+            android:label="@string/title_activity_otra_direccion"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Pedido_finalizado" />
+        <activity
+            android:name=".historial.Historial"
+            android:label="@string/title_activity_historial"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Notificacion_pedido_cancelo"
+            android:label="@string/title_activity_notificacion_pedido_cancelo" />
+        <activity android:name=".Notificacion_mensaje" />
+        <activity android:name=".Notificacion_iniciar_carrera" />
+        <activity
+            android:name=".carreras.Carreras"
+            android:label="Carreras"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Scanear.QR_conductor"
+            android:label="Scanear QR al Conductor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Scanear.QR_vehiculo"
+            android:label="Scanear QR al Vehículo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Scanear.Qr_verificar_conductor"
+            android:label="Scanear QR al Conductor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Scanear.QR_verificar_vehiculo"
+            android:label="Scanear QR al Vehículo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".registro_inicio_sesion.Autenticar_celular"
+            android:label="Verifica tu número"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".registro_inicio_sesion.Confirmar_sms"
+            android:label="Confirmar Codigo"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".compartir.Compartir_principal"
+            android:label="Compartir Carreras"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".compartir.Buscar_usuario"
+            android:label="Buscar Usuarios"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".compartir.Compartir_desde_pedido"
+            android:label="@string/title_activity_compartir_desde_pedido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".panico.Panico_principal"
+            android:label="Compartir Panico"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".panico.Buscar_usuario_panico"
+            android:label="Buscar Usuario"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recorrido_compartido.Main_lista_usuarios_compartidos"
+            android:label="Compartir Recorridos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recorrido_compartido.Carreras_recorrido_usuario"
+            android:label="Carreras con recorrido compartido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recorrido_compartido.Ver_carrera_compartida"
+            android:label="Recorrido Compartido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tarjeta_credito.Registrar_tarjeta"
+            android:label="@string/title_activity_registrar_tarjeta"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".panico.Notificacion_panico"
+            android:label="Contactos con panico"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".video_tutorial.Menu_video"
+            android:label="Video Tutorial"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".video_tutorial.Ver_video"
+            android:label="Ver Video" />
+        <activity
+            android:name=".panico.Datos_contacto_panico"
+            android:label="@string/title_activity_datos_contacto_panico"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Condiciones_terminos"
+            android:label="Condiciones y Terminos de uso" />
+        <activity
+            android:name=".Empresa_radio_taxi"
+            android:label="Empresa"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".perfil.Perfil_pasajero"
+            android:label="@string/title_activity_perfil_pasajero"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".recorrido_compartido.Perfil_pasajero_compartido"
+            android:label="@string/title_activity_perfil_pasajero_compartido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".recorrido_compartido.Perfil_conductor_compartido"
+            android:label="@string/title_activity_perfil_conductor_compartido"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".corporativo.Empresa"
+            android:label="@string/title_activity_empresa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".corporativo.Usuarios_empresa"
+            android:label="@string/title_activity_usuarios_empresa"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".corporativo.Usuarios_buscar"
+            android:label="@string/title_activity_usuarios_buscar"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".guia_turistica.Guia_comercial"
+            android:label="@string/title_activity_guia_comercial"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".guia_turistica.Guia_comercial_catergoria"
+            android:label="@string/title_activity_guia_comercial_catergoria"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".guia_turistica.Mapa_comercial"
+            android:label="@string/title_activity_mapa_comercial" />
+        <activity
+            android:name=".Reservar_movil"
+            android:label="@string/title_activity_reservar_movil"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".reserva.Historial_reserva"
+            android:label="@string/title_activity_historial_reserva"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Servicio_pedir_movil"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Datos_vehiculo"
+            android:label="@string/title_activity_datos_vehiculo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tarifario.Calcular_Tarifa"
+            android:label="@string/title_activity_calcular__tarifa"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".tarifario.Tarifa"
+            android:label="@string/title_activity_tarifa"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".tarifario.Buscar_direccion"
+            android:label="@string/title_activity_buscar_direccion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".reserva.Detalle_reserva"
+            android:label="@string/title_activity_detalle_reserva"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Verificar_numero"
+            android:label="@string/title_activity_verificar_numero"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".preregistro.Datos_conductor"
+            android:label="@string/title_activity_datos_conductor"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".preregistro.Datos_vehiculo_pre"
+            android:label="@string/title_activity_datos_vehiculo_pre"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".preregistro.Imagenes_preregistro_conductor"
+            android:label="@string/title_activity_imagenes_preregistro"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".menu_otra_direccion.Buscar_direccion_inicio"
+            android:label="@string/title_activity_buscar_direccion_inicio"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".menu_otra_direccion.Calcular_tarifa_confirmar"
+            android:label="@string/title_activity_calcular_tarifa_confirmar"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".Servicio_guardar_contacto_empresa"
+            android:enabled="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <service
+            android:name=".Servicio_guardar_contacto"
+            android:enabled="true"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".agregar_direccion.Agregar_direccion_nuevo"
+            android:label="@string/title_activity_agregar_direccion_nuevo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".registro_inicio_sesion.Opcion_inicio_sesion"
+            android:label="@string/title_activity_opcion_inicio_sesion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Imagen_preregistro_vehiculo"
+            android:label="@string/title_activity_imagen_preregistro_vehiculo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".informacion.Pagina"
+            android:label="@string/title_activity_pagina"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.Buscar_direccion_nuevo"
+            android:label="@string/title_activity_buscar_direccion_nuevo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.Datos_direccion"
+            android:label="@string/title_activity_datos_direccion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.Mis_direcciones"
+            android:label="@string/title_activity_mis_direcciones"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.Compartir_amigo"
+            android:label="@string/title_activity_compartir_amigo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".perfil.Billetera"
+            android:label="@string/title_activity_billetera"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Otras_opciones"
+            android:label="@string/title_activity_otras_opciones"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".preregistro.Menu_fotos_preregistro"
+            android:label="@string/title_activity_menu_fotos_preregistro"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_vehiculo"
+            android:label="@string/title_activity_foto_vehiculo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_rua"
+            android:label="@string/title_activity_foto_rua"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_inspeccion_tecnica"
+            android:label="@string/title_activity_foto_inspeccion_tecnica"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_conductor"
+            android:label="@string/title_activity_foto_conductor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_licencia"
+            android:label="@string/title_activity_foto_licencia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_carnet"
+            android:label="@string/title_activity_foto_carnet"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Foto_soat"
+            android:label="@string/title_activity_foto_soat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Menu_datos_conductor"
+            android:label="@string/title_activity_menu_datos_conductor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".preregistro.Menu_datos_vehiculo"
+            android:label="@string/title_activity_menu_datos_vehiculo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+
+        <activity
+            android:name=".chat.Chat"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".chat.Servicio_mensaje_recibido"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".chat.Servicio_guardar_mensaje_enviado"
+            android:exported="false" />
+        <activity
+            android:name=".viajes.Viajes"
+            android:label="@string/title_activity_viajes"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".informacion.Ayuda"
+            android:label="@string/title_activity_ayuda"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

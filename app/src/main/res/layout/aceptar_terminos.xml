@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10sp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PARA PROCEDER, DEBES LEER Y ACEPTAR LOS
+TERMINOS Y CONSENTIMIENTOS:"
+            android:textColor="@color/colorPrimary_text"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Al aceptar y enviar el presente formulario de registro
+Radio Móvil Clásico, acepto expresamente la recolección
+ y el procedimiento que radio Móvil clásico  haga que
+mis datos personales incluyendo datos sensibles con la
+ finalidad de evaluar mi legitimidad para usar o continuar
+ usando la aplicación de radio móvil clásico realizará
+una verificación de antecedentes la cual deberá aprobar
+ antes de conectar con la app de radio Móvil clásico,
+con la información de sus documentos solo si la
+respuesta es positiva y cumples con los demás
+requisitos quedarás activo este proceso de verificación
+de la compañía especializada incluye lo siguiente
+verificación de antecedentes Revisión de antecedentes
+ historial de conducción y el vehículo."
+            android:textColor="@color/colorPrimary_text"
+
+            />
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACEPTAR LOS TERMINOS Y CONDICIONES"
+            android:id="@+id/cb_terminos_condiciones"
+            android:layout_marginBottom="15sp"
+            android:layout_marginTop="15sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACEPTAR/CONTINUAR"
+            style="@style/submit"
+            android:id="@+id/bt_aceptar_continuar"
+            />
+
+    </LinearLayout>
+
+</ScrollView>

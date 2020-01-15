@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".preregistro.Foto_conductor"
+    tools:showIn="@layout/activity_foto_conductor"
+    android:padding="15sp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIcons"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Haz una foto de perfil"
+            />
+        <ImageView
+            android:layout_width="180sp"
+            android:layout_height="180sp"
+            android:layout_gravity="center|center"
+            android:background="@drawable/ic_perfil_plomo"
+            android:layout_margin="10sp"
+            android:id="@+id/im_foto"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIcons"
+            android:textSize="18sp"
+            android:text="Requisitos de la foto:"
+            android:layout_marginTop="10sp"
+            android:layout_marginBottom="10sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.-Muestra tu cara y la parte superior de los hombros."
+            android:textColor="@color/colorIcons"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2.-No lleves gafas de sol ni gorra."
+            android:textColor="@color/colorIcons"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3.-Haz la foto en un lugar bien iluminado."
+            android:textColor="@color/colorIcons"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOMAR UNA FOTO"
+            style="@style/submit"
+            android:layout_marginTop="15sp"
+            android:id="@+id/bt_tomar_foto"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

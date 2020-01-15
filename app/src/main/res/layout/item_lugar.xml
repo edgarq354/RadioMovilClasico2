@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f0f0f0"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/post_border_style"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/box_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/post_border_background"
+            android:orientation="vertical"
+            android:padding="15sp"
+            >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_nombre"
+        android:text="NOmbre"
+        android:textColor="@color/colorPrimary_text"
+        android:textStyle="bold"
+        />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_direccion"
+        android:text="direccion"
+        android:textColor="@color/colorPrimary_text"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@mipmap/ic_llamar"
+            android:id="@+id/fb_llamar"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@mipmap/ic_whatsapp_white"
+            android:id="@+id/fb_whatsapp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@mipmap/ic_mapa"
+            android:id="@+id/fb_ver_mapa"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            />
+
+    </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

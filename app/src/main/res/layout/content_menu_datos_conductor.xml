@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".preregistro.Menu_datos_conductor"
+    tools:showIn="@layout/activity_menu_datos_conductor"
+    android:padding="15sp"
+    android:background="@color/colorPrimary_light"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Foto de perfil"
+                style="@style/submit4"
+                android:background="@color/colorTextoBoton"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/bt_perfil"
+                />
+            <ImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_advertencia"
+                android:id="@+id/im_perfil"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Licencia de conducir"
+                style="@style/submit4"
+                android:background="@color/colorTextoBoton"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:id="@+id/bt_licencia"
+                />
+            <ImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_advertencia"
+                android:id="@+id/im_licencia"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Carnet de identidad"
+                style="@style/submit4"
+                android:background="@color/colorTextoBoton"
+                android:layout_weight="1"
+                android:id="@+id/bt_carnet"
+                android:layout_gravity="center"
+                />
+            <ImageView
+                android:layout_width="60sp"
+                android:layout_height="60sp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_advertencia"
+                android:id="@+id/im_carnet"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancelar reserva"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorTextoBoton"
+        android:padding="10sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp"
+        android:paddingLeft="5sp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:text=""
+            android:hint="Introduzca un descripción."
+            android:id="@+id/et_descripcion"
+            android:inputType="text|textMultiLine"
+            android:gravity="top"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CANCELAR"
+            style="@style/submit3"
+            android:id="@+id/bt_cancelar"
+            android:layout_margin="1sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CONFIRMAR"
+            style="@style/submit2"
+            android:id="@+id/bt_pedir"
+            android:layout_margin="1sp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

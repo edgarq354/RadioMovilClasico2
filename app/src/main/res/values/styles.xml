@@ -6,6 +6,121 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">@android:color/holo_blue_light</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/specify_norm_light</item>
+        <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+        <!--
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        -->
+    </style>
+
+
+    <style name="Error" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textColor">#ff0d00</item>
+    </style>
+
+
+    <style name="submit">
+        <item name="android:background">@drawable/bk_boton_submit</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="submit2">
+        <item name="android:background">@drawable/bk_boton</item>
+        <item name="android:textColor">@color/colorTextoBoton</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:layout_marginRight">5sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+    </style>
+
+    <style name="submit_facebook">
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:layout_marginRight">5sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+        <item name="android:padding">5sp</item>
+
+    </style>
+
+    <style name="submit3">
+        <item name="android:background">@drawable/bk_boton_submit_3</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:layout_marginRight">5sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+    </style>
+
+    <style name="submit4">
+        <item name="android:background">@drawable/bk_boton_conexion_notificacion</item>
+        <item name="android:textColor">@color/colorPrimary_text</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="submit5">
+        <item name="android:background">@drawable/bk_boton_conexion</item>
+        <item name="android:textColor">@color/colorPrimary_text</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="submit6">
+        <item name="android:background">@drawable/bk_boton_empresa</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+
+    <style name="submit7">
+        <item name="android:background">@drawable/bk_boton</item>
+        <item name="android:textColor">@color/colorTextoBoton</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginLeft">1sp</item>
+        <item name="android:layout_marginRight">1sp</item>
+        <item name="android:layout_marginBottom">1sp</item>
+
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorSecondary_text</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+
+    </style>
+
+
+    <style name="FacebookLoginButton">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:padding">30dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:text">INICIAR EN FACEBOOK</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_marginTop">25sp</item>
+        <item name="android:layout_marginBottom">25sp</item>
+    </style>
 </resources>

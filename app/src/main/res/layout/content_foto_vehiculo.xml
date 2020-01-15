@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".preregistro.Foto_vehiculo"
+    tools:showIn="@layout/activity_foto_vehiculo"
+    android:padding="15sp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIcons"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:text="Haz una foto de vehículo"
+            />
+        <ImageView
+            android:layout_width="300sp"
+            android:layout_height="160sp"
+            android:layout_gravity="center|center"
+            android:background="@drawable/ic_vehiculos"
+            android:layout_margin="10sp"
+            android:id="@+id/im_foto"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorIcons"
+            android:textSize="18sp"
+            android:text="Requisitos de la foto:"
+            android:layout_marginBottom="10sp"
+            android:gravity="center|center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Requerimientos del vehículo:"
+            android:textColor="@color/colorIcons"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lo mas importante es tener un vehículo."
+            android:textColor="@color/colorIcons"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No necesariamente debe estar a tu nombre."
+            android:textColor="@color/colorIcons"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Los requisitos del vehículo son:"
+            android:textColor="@color/colorIcons"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Excelente condiciones estéticas y mecánicas."
+            android:textColor="@color/colorIcons"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TOMAR UNA FOTO"
+            style="@style/submit"
+            android:layout_marginTop="15sp"
+            android:id="@+id/bt_tomar_foto"
+            />
+
+
+    </LinearLayout>
+
+</ScrollView>

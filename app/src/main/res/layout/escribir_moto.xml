@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Solicitud de Moto"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:background="@color/colorDivider"
+        android:textColor="@color/colorTextoBoton"
+        android:padding="10sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp"
+        android:paddingLeft="5sp"
+        android:background="@drawable/presentacion"
+        >
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solo moto."
+                android:id="@+id/rb_solo_moto"
+                android:layout_weight="1"
+                android:checked="true"
+                />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Un pedido."
+                android:id="@+id/rb_un_pedido"
+                android:layout_weight="1"
+                />
+        </RadioGroup>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:text=""
+            android:hint="Introduzca una descripción."
+            android:id="@+id/et_referencia"
+            android:inputType="text|textMultiLine"
+            android:gravity="top"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CANCELAR"
+            style="@style/submit3"
+            android:id="@+id/bt_cancelar"
+            android:layout_margin="1sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CONFIRMAR"
+            style="@style/submit2"
+            android:id="@+id/bt_pedir"
+            android:layout_margin="1sp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

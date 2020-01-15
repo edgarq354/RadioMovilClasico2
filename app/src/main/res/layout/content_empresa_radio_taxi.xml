@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiomovilclasico.Empresa_radio_taxi"
+    tools:showIn="@layout/activity_empresa_radio_taxi">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp"
+    android:padding="5sp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="top"
+        >
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            >
+
+            <ImageView
+                android:id="@+id/im_logo"
+                android:layout_width="match_parent"
+                android:layout_height="150sp"
+                android:src="@drawable/ic_logo"
+                />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_taxicorp_nombre"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zona Pampa de la Isla."
+            android:textColor="@color/colorPrimary_text"
+            android:gravity="center"
+            />
+
+
+
+
+
+
+                 <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text=""
+                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_whatsapp"
+                    android:layout_marginRight="15sp"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginBottom="5sp"
+                    android:padding="5sp"
+                    android:background="@drawable/bk_boton_submit"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_whatsapp_white"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="  +591 76633339"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_llamar"
+                    android:layout_marginLeft="15sp"
+                    android:layout_marginRight="15sp"
+                    android:padding="5sp"
+                    android:background="@drawable/bk_boton_submit"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_llamar"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center|left"
+                        android:text="  347-4444"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+                </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</FrameLayout>

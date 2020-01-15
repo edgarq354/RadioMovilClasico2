@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.taxicorp.recorrido_compartido.Carreras_recorrido_usuario"
+    tools:showIn="@layout/activity_carreras_recorrido_usuario">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista vacia"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary_text"
+        android:id="@+id/tv_mensaje"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_lista"
+        >
+    </ListView>
+
+
+</LinearLayout>
+

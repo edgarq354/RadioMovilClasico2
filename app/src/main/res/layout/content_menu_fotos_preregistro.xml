@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".preregistro.Menu_fotos_preregistro"
+    tools:showIn="@layout/activity_menu_fotos_preregistro"
+    android:background="@color/colorPrimary_light">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_logo_conductor"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Registro exitoso"
+            android:textColor="@color/colorIcons"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorTextoBoton"
+            android:layout_margin="10sp"
+            android:padding="5sp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="CONDUCTOR"
+                android:textSize="18sp"
+                android:textColor="@color/colorIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center"
+                    android:text="Registro completado"
+                    android:textSize="18sp"
+                    />
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:text="Subir documento"
+                    style="@style/submit"
+                    android:layout_gravity="center|center"
+                    android:id="@+id/bt_conductor"
+                    />
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:background="@drawable/ic_perfil_negro"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorTextoBoton"
+            android:layout_margin="10sp"
+            android:padding="5sp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="VEHICULO"
+                android:textSize="18sp"
+                android:textColor="@color/colorIcons"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|center"
+                    android:text="Registro completado"
+                    android:textSize="18sp"
+                    />
+                <Button
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:text="Subir documento"
+                    style="@style/submit"
+                    android:layout_gravity="center|center"
+                    android:id="@+id/bt_vehiculo"
+                    />
+                <ImageView
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:background="@mipmap/ic_taxi"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorTextoBoton"
+            android:layout_margin="10sp"
+            android:padding="5sp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Esperando la aprobación de la Administración"
+                android:textColor="@color/colorIcons"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10sp"
+                android:layout_marginBottom="10sp"
+                android:text="Vamos a revisar su información proporcionada y estaremos en contracto con usted pronto.\n¡Ahora puedes navegarte en nuestra aplicación de Conductor!"
+                />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Finalizar"
+                    style="@style/submit"
+                    android:layout_weight="1"
+                    android:id="@+id/bt_finalizar"
+                    android:layout_gravity="center|center"
+                    />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_menu_usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiomovilclasico.Menu_usuario"
+    android:background="#d5000000"
+    tools:showIn="@layout/activity_pedido_usuario_2">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscando Taxi . . ."
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:padding="25sp"
+        android:layout_marginTop="25sp"
+        android:id="@+id/tv_mensaje_pedido"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/radar2"
+        android:id="@+id/im_rodar_pedido"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/submit2"
+        android:text="CANCELAR"
+        android:layout_gravity="bottom"
+        android:id="@+id/bt_cancelar_pedido"
+        />
+
+</FrameLayout>

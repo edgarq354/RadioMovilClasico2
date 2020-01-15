@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".perfil.Billetera"
+    tools:showIn="@layout/activity_billetera"
+    android:orientation="vertical"
+
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOB 0.0"
+        android:gravity="center|center"
+        android:paddingTop="50sp"
+        android:paddingBottom="50sp"
+        android:textSize="40sp"
+        android:textColor="@color/colorTextoBoton"
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/tv_monto"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15sp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar bono"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+
+            />
+
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:hint="Ingrese el codigo"
+            android:background="@drawable/boton_normal5"
+            android:padding="15sp"
+            android:textSize="30sp"
+            android:id="@+id/et_codigo"
+            android:layout_marginTop="15sp"
+            android:singleLine="true"
+            android:imeOptions="actionDone"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo funciona las invitaciones?"
+            android:textColor="@color/colorPrimaryDark"
+            android:padding="15sp"
+            android:background="@drawable/disenio"
+            android:id="@+id/tv_como_funciona"
+            android:layout_marginTop="15sp"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AGREGAR BONO"
+            style="@style/submit"
+            android:layout_marginTop="15sp"
+            android:id="@+id/bt_agregar"
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

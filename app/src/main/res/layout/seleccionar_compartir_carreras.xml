@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Todo"
+            android:textColor="#000"
+            android:layout_gravity="left"
+            android:gravity="center|left"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:padding="15sp"
+            android:layout_margin="0sp"
+            android:id="@+id/cb_todo"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/submit2"
+            android:layout_margin="0sp"
+            android:background="@mipmap/ic_usuario_mas"
+            android:id="@+id/ib_buscar"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lv_lista"
+        android:layout_weight="1"
+        >
+
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CANCELAR"
+            style="@style/submit3"
+            android:id="@+id/bt_cancelar"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="COMPARTIR"
+            style="@style/submit2"
+            android:id="@+id/bt_compartir"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

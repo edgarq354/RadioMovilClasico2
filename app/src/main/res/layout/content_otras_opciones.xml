@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Otras_opciones"
+    tools:showIn="@layout/activity_otras_opciones"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guia Comercial"
+        android:textColor="@color/colorPrimary_text"
+        android:gravity="center|left"
+        android:background="@drawable/disenio"
+        android:id="@+id/tv_guia_comercial"
+        android:drawableLeft="@mipmap/ic_mis_direcciones"
+        android:layout_marginTop="15sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Videos"
+        android:textColor="@color/colorPrimary_text"
+        android:gravity="center|left"
+        android:background="@drawable/disenio"
+        android:id="@+id/tv_video"
+        android:drawableLeft="@mipmap/ic_vehiculo"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QR de Movil"
+        android:textColor="@color/colorPrimary_text"
+        android:gravity="center|left"
+        android:background="@drawable/disenio"
+        android:id="@+id/tv_qr_movil"
+        android:drawableLeft="@mipmap/ic_taxi"
+        />
+
+</LinearLayout>

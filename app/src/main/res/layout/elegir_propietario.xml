@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/submit6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:orientation="vertical"
+            android:padding="15sp"
+            android:id="@+id/ll_propietario"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quiero Conducir mi auto"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elige esa opcion si tienes mas de 18 años, quieres conducir y tienes tu propio vehículo."
+                android:textColor="@color/colorPrimary_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/submit6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            android:orientation="vertical"
+            android:padding="15sp"
+            android:id="@+id/ll_conductor">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Soy conductor de un auto"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elige esa opcion si tienes mas de 18 años, y conduces un vehículo que no eres el dueño."
+                android:textColor="@color/colorPrimary_text" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

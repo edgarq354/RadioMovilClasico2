@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.elisoft.taxicorp.Notificacion_pedido_taxi" >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ninguna indicación."
+        android:id="@+id/indicacion"
+        android:textColor="#fff"
+        android:background="#000"
+        android:padding="5sp"
+        />
+
+
+    <fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="0.8"
+        />
+
+    <LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+    >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ACEPTAR"
+            android:layout_weight="1"
+            android:id="@+id/aceptar"
+            style="@style/submit2"  />
+
+        <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CANCELAR"
+    android:layout_weight="1"
+    android:id="@+id/cancelar"
+    style="@style/submit2"/>
+
+</LinearLayout>
+
+</LinearLayout>

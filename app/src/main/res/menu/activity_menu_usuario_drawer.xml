@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/perfil"
+            android:icon="@mipmap/ic_nombre"
+            android:title="PERFIL" />
+        <item
+            android:id="@+id/it_mensajes"
+            android:icon="@mipmap/ic_notificacion"
+            android:title="NOTIFICACIÓN" />
+
+        <item
+            android:id="@+id/it_billetera"
+            android:icon="@mipmap/ic_boletion"
+            android:title="MI BILLETERA" />
+        <item
+            android:id="@+id/it_mis_direcciones"
+            android:icon="@mipmap/ic_mis_direcciones"
+            android:title="MIS DIRECCIONES" />
+        <item
+            android:id="@+id/historial"
+            android:icon="@mipmap/ic_historial"
+            android:title="HISTORIAL" />
+        <item
+            android:id="@+id/reservas"
+            android:icon="@mipmap/ic_fecha"
+            android:title="RESERVAS"
+            android:visible="false" />
+
+
+        <item
+            android:id="@+id/it_tarifario"
+            android:icon="@mipmap/ic_moneda"
+            android:title="TARIFARIO"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/it_taxi_seguro"
+            android:icon="@mipmap/ic_moneda"
+            android:title="TAXI SEGURO"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/it_compartir"
+            android:icon="@mipmap/ic_compartir"
+            android:title="COMPARTIR" />
+        <item
+            android:id="@+id/it_otras"
+            android:icon="@mipmap/ic_otras"
+            android:title="OTRAS"
+            android:visible="true" />
+
+
+    </group>
+
+    <item android:title="COMUNICATE CON LA CENTRAL">
+        <menu>
+            <item
+                android:id="@+id/it_whatsapp"
+                android:icon="@mipmap/ic_whatsapp_white"
+                android:title="WHATSAPP" />
+            <item
+                android:id="@+id/it_telefono"
+                android:icon="@mipmap/ic_llamar"
+                android:title="TELEFONO" />
+            <item
+                android:id="@+id/informacion"
+                android:icon="@drawable/ic_llamada_empresa"
+                android:title="INFORMACIÓN" />
+
+        </menu>
+    </item>
+    <item android:title="Nuevo Conductor">
+        <menu>
+            <item
+                android:id="@+id/it_registrar_conductor"
+                android:icon="@drawable/ic_volante"
+                android:title="SER CONDUCTOR" />
+        </menu>
+    </item>
+</menu>

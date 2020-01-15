@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiomovilclasico.menu_otra_direccion.Calcular_tarifa_confirmar"
+    tools:showIn="@layout/activity_calcular__tarifa"
+    android:orientation="vertical"
+    android:background="@color/colorTextoBoton"
+    >
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.grayhartcorp.quevengan.Menu_p"
+        android:layout_weight="0.8"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:background="@mipmap/ic_punto_inicio"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Punto inicio"
+                    android:id="@+id/tv_punto_inicio"
+                    android:textStyle="bold"
+                    android:gravity="center|left"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:background="@mipmap/ic_punto_fin"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Punto final"
+                    android:id="@+id/tv_punto_final"
+                    android:gravity="center|left"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10sp"
+                android:background="@color/colorPrimary_light_bajito"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Distancia"
+                        android:id="@+id/tv_distancia"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 mt"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_monto_distancia"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tiempo"
+                        android:id="@+id/tv_tiempo"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0 min"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_monto_tiempo"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center|center"
+                android:layout_gravity="center|center"
+                android:id="@+id/pedir_movil"
+
+                >
+                <ImageView
+                    android:layout_width="75sp"
+                    android:layout_height="35sp"
+                    android:background="@drawable/billete"
+                    android:layout_marginRight="15sp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 BOB"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/tv_tarifa_normal"
+                    android:textColor="@color/colorIcons"
+                    android:textSize="30sp"
+                    />
+            </LinearLayout>
+
+
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+
+
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="0sp"
+                        android:orientation="vertical"
+                        style="@style/submit7"
+                        android:id="@+id/pedir_movil_lujo"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="DE LUJO"
+                            android:textColor="@color/colorTextoBoton"
+                            />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_movil_lujo"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="0sp"
+                        android:orientation="vertical"
+                        style="@style/submit7"
+                        android:id="@+id/pedir_movil_aire"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 Bs"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/colorIcons"
+                            android:id="@+id/tv_tarifa_con_aire"
+                            android:textSize="30sp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_movil_aire"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="CON AIRE"
+                                android:textColor="@color/colorTextoBoton"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="0sp"
+                        android:orientation="vertical"
+                        style="@style/submit7"
+                        android:id="@+id/pedir_movil_maletero"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0 Bs"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:id="@+id/tv_tarifa_maletero"
+                            android:textColor="@color/colorIcons"
+                            android:textSize="30sp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/ic_movil_maletero"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="MALETERO"
+                                android:textColor="@color/colorTextoBoton"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="0sp"
+                        android:orientation="vertical"
+                        style="@style/submit7"
+                        android:id="@+id/pedir_movil_pedido"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="PEDIDO"
+                            android:textColor="@color/colorTextoBoton"
+                            />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_movil_pedido"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="0sp"
+                        android:orientation="vertical"
+                        style="@style/submit7"
+                        android:id="@+id/pedir_movil_reserva"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="RESERVAR"
+                            android:textColor="@color/colorTextoBoton"
+                            />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_movil_reserva"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0sp"
+                        android:layout_height="0sp"
+                        android:orientation="vertical"
+                        style="@style/submit7"
+                        android:id="@+id/pedir_moto"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="MOTO"
+                            android:textColor="@color/colorTextoBoton"
+                            />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_moto"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:orientation="vertical"
+                android:padding="10sp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DE LUJO"
+                        android:textColor="@color/colorAccent_presion"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="monto"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_tarifa_de_lujo"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UN MOVIL CON PEDIDO"
+                        android:textColor="@color/colorAccent_presion"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="monto"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_tarifa_con_pedido"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CON RESERVA"
+                        android:textColor="@color/colorAccent_presion"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="monto"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_tarifa_con_reserva"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UNA MOTO"
+                        android:textColor="@color/colorAccent_presion"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="monto"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_tarifa_moto"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="UNA MOTO CON PEDIDO"
+                        android:textColor="@color/colorAccent_presion"
+                        android:layout_weight="1"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="monto"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:id="@+id/tv_tarifa_moto_pedido"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

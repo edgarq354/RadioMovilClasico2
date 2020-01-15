@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".perfil.Datos_direccion"
+    tools:showIn="@layout/activity_datos_direccion"
+
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10sp"
+    android:layout_gravity="top"
+    >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:layout_marginTop="15sp"
+        android:textColor="@color/colorIcons"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_nombre"
+        android:hint="ej. Casa de Moises"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dirección:"
+        android:layout_marginTop="25sp"
+        android:textColor="@color/colorIcons"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_direccion"
+        android:textColor="@color/colorIcons"
+        />
+
+
+</LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/submit"
+        android:text="GUARDAR"
+        android:layout_gravity="bottom"
+        android:layout_margin="15sp"
+        android:id="@+id/bt_guardar"
+        />
+</FrameLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cancelar_pedido_movil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.elisoft.taxicorp.Cancelar_pedido_movil">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="15sp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Porqué esta cancelando el Pedido?"
+            android:textColor="@color/colorPrimary_text"
+            />
+        <EditText
+            android:id="@+id/et_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:hint="ejemplo: Por falla mecanica."
+            />
+    </LinearLayout>
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Confirmar"
+    android:id="@+id/bt_cancelar"
+    android:layout_gravity="bottom"
+    style="@style/submit2"
+    />
+</FrameLayout>

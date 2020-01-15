@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMUNICATE CON EL CONDUCTOR"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:padding="0sp"
+        android:background="@color/colorAccent"
+        android:drawableLeft="@mipmap/conectar_conductor"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Con notificaciones predeterminadas"
+        android:textColor="@color/colorPrimary_text"
+        android:gravity="left"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:padding="5sp"
+        android:background="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/bt_voy_en_camino"
+        style="@style/submit4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0sp"
+        android:gravity="left|center"
+        android:paddingLeft="5sp"
+        android:text="Ok voy saliendo" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_estamos_esperando"
+        android:text="Lo estamos esperando"
+        style="@style/submit4"
+        android:paddingLeft="5sp"
+        android:gravity="left|center"
+        android:layout_margin="0sp"
+        />
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt_llameme"
+    android:text="Llámeme"
+        android:paddingLeft="5sp"
+        android:gravity="left|center"
+    style="@style/submit4"
+    android:layout_margin="0sp"
+    />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Por otros medios"
+        android:textColor="@color/colorPrimary_text"
+        android:gravity="left"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:padding="5sp"
+        android:background="@color/colorPrimary"
+        />
+    <Button
+        android:id="@+id/bt_llamada_conductor"
+        style="@style/submit5"
+        android:gravity="left|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0sp"
+        android:drawableLeft="@mipmap/ic_celular"
+        android:text="LLAMADA" />
+
+    <Button
+        android:id="@+id/bt_mensaje_conductor"
+        style="@style/submit5"
+        android:gravity="left|center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0sp"
+        android:drawableLeft="@mipmap/ic_mensaje"
+        android:text="MENSAJE" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_whatsapp_conductor"
+        android:text="CHAT-CLASICO"
+        android:gravity="left|center"
+        style="@style/submit5"
+        android:drawableLeft="@mipmap/ic_whatsapp"
+        android:layout_margin="0sp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_ninguna"
+        android:text="NINGUNA"
+        android:gravity="left|center"
+        style="@style/submit5"
+        android:paddingLeft="5sp"
+        android:layout_margin="0sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificar tu movil por codigo QR"
+        android:textColor="@color/colorPrimary_text"
+        android:gravity="left|center"
+        android:textStyle="normal"
+        android:textSize="15sp"
+        android:padding="5sp"
+        android:background="@color/colorPrimary"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_qr_vehiculo"
+        android:text="Scanear QR VEHICULO"
+        android:drawableLeft="@mipmap/ic_vehiculo"
+        android:gravity="left|center"
+        style="@style/submit4"
+        android:layout_margin="0sp"
+        />
+</LinearLayout>
+</ScrollView>

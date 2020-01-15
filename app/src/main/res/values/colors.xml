@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent_presion">#212121</color>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorPrimary_light">#e6e2e9</color>
+    <color name="colorPrimary_light_bajito">#f7fcf7</color>
+    <color name="colorAccent">#8BC34A</color>
+    <color name="colorPrimary_text">#212121</color>
+    <color name="colorSecondary_text">#757575</color>
+    <color name="colorIcons">#212121</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorTransparente_1">#7d00ff33</color>
+    <color name="colorTransparente_2">#d5000000</color>
+    <color name="colorTextoBoton">#fff</color>
+    <color name="colorazul">#3577b5</color>
+    <color name="colorPedido">#fc5353</color>
+    <color name="colorReserva">#009cdf</color>
+
+    <color name="colorChat">#C0EEC1</color>
+    <color name="colorChatOscuro">#A0D3A1</color>
 </resources>

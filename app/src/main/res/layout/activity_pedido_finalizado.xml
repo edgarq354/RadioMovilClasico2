@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_menu_usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.elisoft.radiomovilclasico.Pedido_finalizado"
+    android:background="@color/colorTransparente_2"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/alert_light_frame"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical"
+
+
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SERVICIO FINALIZADO"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:padding="15sp"
+                android:textColor="@color/colorTextoBoton"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorPrimary_text"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="20sp"
+                android:id="@+id/tv_detalle"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:textSize="25sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0sp"
+                android:text="Distancia 12 Km."
+                android:id="@+id/tv_distancia"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary_text"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 BOB"
+                android:id="@+id/tv_mensaje"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary_text"
+                android:paddingLeft="5sp"
+                android:paddingRight="5sp"
+                android:layout_marginBottom="30sp"
+                android:textSize="30sp"
+                android:gravity="center|center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALIFICA AL CONDUCTOR"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary_text"
+
+                />
+            <RatingBar
+                android:id="@+id/rb_conductor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:numStars="5"
+                android:stepSize="0.1"
+                android:layout_gravity="center"
+                android:rating="0"
+                android:theme="@style/RatingBar"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CALIFICA AL VEHICULO"
+                android:gravity="center"
+                android:layout_marginTop="15sp"
+                android:textColor="@color/colorPrimary_text"
+
+                />
+            <RatingBar
+                android:id="@+id/rb_vehiculo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0"
+                android:theme="@style/RatingBar"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="OK"
+                android:id="@+id/bt_aceptar"
+                style="@style/submit2"
+                android:padding="0sp"
+                android:layout_margin="0sp"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>

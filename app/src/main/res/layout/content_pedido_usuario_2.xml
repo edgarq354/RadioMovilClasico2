@@ -1,0 +1,376 @@
+
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_otra_direccion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiomovilclasico.Pedido_usuario"
+    tools:showIn="@layout/activity_pedido_usuario_2"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    >
+        <fragment
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+
+
+
+</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|bottom"
+            android:id="@+id/ll_pedido"
+            >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="1"
+    >
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="PERFIL DEL CONDUCTOR"
+        android:id="@+id/bt_ver_perfil"
+        android:layout_weight="1"
+        android:drawableRight="@mipmap/ic_nombre"
+        style="@style/submit2" />
+
+
+</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="0"
+                android:id="@+id/ll_cancelar"
+                >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Cancelar"
+                    android:id="@+id/bt_cancelar"
+                    android:layout_weight="1"
+                    style="@style/submit3" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:layout_width="50sp"
+                    style="@style/submit2"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_empresa"
+                    android:id="@+id/bt_contacto_empresa"
+                    android:layout_margin="0sp"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textColor="@color/colorTextoBoton"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:id="@+id/tv_titulo"
+                    android:layout_weight="1"
+                    />
+
+                <ImageButton
+                    android:id="@+id/bt_contacto_conductor"
+                    style="@style/submit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:paddingLeft="5sp"
+                    android:paddingRight="5sp"
+                    android:layout_margin="0sp"
+                    android:src="@mipmap/conectar_conductor" />
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50sp"
+        android:orientation="vertical"
+        android:id="@+id/ll_perfil"
+        android:background="@color/colorTransparente_2"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            >
+            <TextView
+                android:layout_marginTop="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Su movil esta en camino . . ."
+                android:textColor="@color/colorTextoBoton"
+                android:layout_weight="1"
+                />
+            <ImageView
+
+                android:layout_marginRight="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_cerrar"
+                android:gravity="right"
+                android:layout_gravity="right"
+                android:id="@+id/im_cerrar"
+                />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220sp"
+                    android:id="@+id/im_perfil"
+                    android:src="@drawable/ic_perfil_blanco"
+                    android:layout_marginBottom="15sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="NOMBRE DEL CONDUCTOR"
+                    android:id="@+id/tv_nombre"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorTextoBoton"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10sp"
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        style="@style/submit6"
+                        android:id="@+id/ll_vehiculo"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="#0"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorTextoBoton"
+                            android:padding="5sp"
+                            android:gravity="center"
+                            android:id="@+id/tv_numero_movil"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Ver datos del Movil"
+                            android:textColor="@color/colorTextoBoton"
+                            android:padding="5sp"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+
+                            android:src="@mipmap/ic_derecha"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5sp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marca: "
+                        android:textColor="@color/colorTextoBoton"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/tv_marca"
+                        android:textColor="@color/colorTextoBoton"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5sp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Placa: "
+                        android:textColor="@color/colorTextoBoton"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/tv_placa"
+                        android:textColor="@color/colorTextoBoton"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5sp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Color: "
+                        android:textColor="@color/colorTextoBoton"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/tv_color"
+                        android:textColor="@color/colorTextoBoton"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5sp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calificación del conductor"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <RatingBar
+                        android:id="@+id/rb_conductor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorTextoBoton"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="0"
+                        android:isIndicator="true"
+                        android:theme="@style/RatingBar"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5sp"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Calificación del vehículo"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+                    <RatingBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_vehiculo"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="0"
+                        android:isIndicator="true"
+                        android:theme="@style/RatingBar"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ll_flotante"
+        >
+
+    <include layout="@layout/contenido_pedir_taxi" />
+    </LinearLayout>
+
+
+</FrameLayout>
+

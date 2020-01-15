@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_menu_usuario"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiomovilclasico.Menu_usuario"
+    tools:showIn="@layout/app_bar_menu_usuario">
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ubicacion"
+        android:text="dato"
+        android:visibility="invisible"
+        />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.grayhartcorp.quevengan.Menu_p"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/map_custom_marker"
+        android:layout_width="40pt"
+        android:layout_height="40pt"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_punto"
+        android:layout_marginBottom="15pt"
+        android:visibility="visible"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center|bottom"
+        >
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:padding="5sp"
+            android:layout_marginBottom="5sp"
+            android:background="@drawable/presentacion"
+            >
+
+
+
+
+            <CheckBox
+                android:id="@+id/cb_tipo_pedido_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SOLICITUD CORPORATIVA"
+                />
+
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="0sp"
+                android:orientation="horizontal"
+                android:layout_gravity="center|bottom"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_movil"
+                    android:gravity="center"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_movil_normal"/>
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="PEDIR AHORA"
+                        android:textColor="@color/colorTextoBoton"
+                        android:textSize="25sp"
+                        android:layout_marginLeft="15sp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_movil_lujo"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="DE LUJO"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_movil_lujo"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_movil_aire"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="CON AIRE"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_movil_aire"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_movil_maletero"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="MALETERO"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_movil_maletero"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_movil_pedido"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="PEDIDO"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_movil_pedido" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_movil_reserva"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="RESERVAR"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_movil_reserva"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    style="@style/submit7"
+                    android:id="@+id/pedir_moto"
+
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="MOTO"
+                        android:textColor="@color/colorTextoBoton"
+                        />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_moto"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right|center_vertical"
+        >
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:clickable="true"
+            app:fabSize="mini"
+            android:visibility="invisible"
+            app:srcCompat="@mipmap/ic_mapa"
+            android:id="@+id/ver_movil"
+            />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@mipmap/ic_llamar"
+            android:id="@+id/fb_llamar"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:srcCompat="@mipmap/ic_whatsapp_white"
+            android:id="@+id/fb_whatsapp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5sp"
+        android:layout_marginTop="60sp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:padding="5sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginLeft="10sp"
+
+
+            >
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_gps_location"
+                android:layout_marginLeft="5sp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="UBICACIÓN ACTUAL"
+                    android:gravity="center"
+                    android:id="@+id/tv_ubicacion"
+                    android:textColor="@color/colorTextoBoton"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/buscar_direccion"
+
+            android:padding="20sp"
+            android:layout_marginTop="-8sp"
+            android:layout_marginRight="-8sp"
+            android:layout_marginLeft="-8sp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+
+            >
+
+            <ImageView
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:src="@mipmap/ic_gps_location_negro"
+                android:layout_marginLeft="5sp"
+
+                />
+
+
+                <TextView
+                    android:text="¿Donde desea ir ?"
+                    android:textColor="@color/colorIcons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|left"
+                    />
+
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            >
+
+
+
+
+
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</FrameLayout>

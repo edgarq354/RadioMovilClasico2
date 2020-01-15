@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".preregistro.Datos_vehiculo_pre"
+    tools:showIn="@layout/activity_datos_vehiculo_pre">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="70sp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="15sp"
+            >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+
+            >
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_ci"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_placa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Placa"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="15sp"
+
+                android:paddingLeft="15sp"
+                android:background="@drawable/boton_normal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RADICATORIA:"
+                    android:textSize="15sp"
+                    android:textColor="#fff"
+                    android:textStyle="bold"
+                    />
+                <Spinner
+                    android:id="@+id/sp_radicatoria"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:entries="@array/lista_departamento"
+                    android:textAlignment="center"
+                    />
+            </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_marca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Marca ej.(Toyota)"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            >
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_tipo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Tipo ej.(Corrolla)"
+
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_clase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Clase (AUTOMOVIL)"
+                    android:inputType="textCapCharacters"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_modelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Modelo (Año)"
+                    android:inputType="phone"
+                    android:text="2018"
+
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            >
+
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Color" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Motorisado"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginTop="15sp"
+                android:textColor="@color/colorPrimaryDark"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_movil"
+                    android:checked="true"
+                    android:text="VEHÍCULO"
+                    android:layout_weight="1"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_moto"
+                    android:text="MOTO"
+                    android:layout_weight="1"
+                    />
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rb_moto_torito"
+                    android:text="MOTO TORITO"
+                    android:layout_weight="1"
+                    />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:padding="15sp"
+    >
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="DATOS DEL PROPIETARIO DEL VEHICULO"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="17sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            >
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+                <EditText
+                    android:id="@+id/et_ci_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Cedula de Indentidad"
+
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expedido:"
+            android:textSize="15sp"
+            android:textColor="@color/colorPrimaryDark"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
+
+        android:paddingLeft="15sp"
+        android:background="@drawable/boton_normal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expedido:"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            />
+        <Spinner
+            android:id="@+id/sp_departamento"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:entries="@array/lista_departamento"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/area_nombre"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="15sp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_nombre"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorTextAppearance="@style/Error"
+                android:textColorHint="@color/colorAccent"
+                >
+
+                <EditText
+                    android:id="@+id/et_nombre_pro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Nombre"
+
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area_nombre"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorTextAppearance="@style/Error"
+            android:textColorHint="@color/colorAccent"
+            >
+
+            <EditText
+                android:id="@+id/et_paterno_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Paterno"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/area_nombre"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:errorTextAppearance="@style/Error"
+            android:textColorHint="@color/colorAccent"
+            >
+
+            <EditText
+                android:id="@+id/et_materno_pro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Materno"
+                />
+
+        </android.support.design.widget.TextInputLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SIGUIENTE"
+        android:textSize="25sp"
+        android:padding="10sp"
+        style="@style/submit"
+        android:id="@+id/bt_siguiente"
+
+        android:layout_gravity="bottom"
+        android:layout_marginTop="25sp"
+        />
+    </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

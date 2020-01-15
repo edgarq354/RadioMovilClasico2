@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.elisoft.taxicorp.Otra_direccion">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="@string/title_activity_otra_direccion"
+    android:id="@+id/tv_buscar_otra_direccion"
+    style="@style/submit2"
+    android:layout_margin="0sp"
+    android:gravity="center"
+    android:textSize="20dp"
+    android:textStyle="normal"
+    android:paddingRight="15sp"
+    />
+            <!--
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="25sp"
+                android:textStyle="normal"
+                android:paddingRight="5sp"
+                android:hint="Buscar dirección"
+                android:id="@+id/et_buscar"
+                android:gravity="center_vertical|left"
+                />
+-->
+            </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_otra_direccion" />
+
+
+</android.support.design.widget.CoordinatorLayout>

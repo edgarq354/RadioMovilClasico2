@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context=".perfil.Buscar_direccion_nuevo"
+tools:showIn="@layout/activity_buscar_direccion_nuevo"
+android:orientation="vertical"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2sp"
+    android:background="@drawable/edit_text_style"
+    >
+
+
+    <EditText
+        android:id="@+id/autocomplete_places"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:paddingLeft="8dp"
+        android:paddingRight="9dp"
+        android:singleLine="true"
+        android:background="@drawable/edit_text_style"
+        android:drawableLeft="@drawable/search"
+        android:gravity="center|left"
+        android:text=""
+        android:drawablePadding="9dp"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="18sp"
+        />
+
+
+    <ImageView
+        android:id="@+id/cross"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="17dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/cross"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/autocomplete_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="60sp"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:id="@+id/bt_fijar_ubicacion"
+    android:background="@drawable/disenio"
+    >
+    <ImageView
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_gravity="center|center"
+        android:background="@mipmap/ic_gps_location_negro"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:text="Establecer la ubicación en el mapa"
+        android:gravity="center|left"
+        android:textColor="@color/colorIcons"
+        android:layout_marginLeft="5sp"
+        />
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="0sp"
+    android:layout_height="0sp"
+    android:orientation="horizontal"
+    android:id="@+id/ll_agregar_en_otro_momento"
+    android:background="@drawable/disenio"
+    android:layout_margin="3sp"
+
+
+    >
+    <ImageView
+
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:background="@mipmap/ic_derecha"
+        android:layout_marginTop="5sp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="9dp"
+        android:singleLine="true"
+        android:gravity="left|center"
+        android:textColor="@color/colorIcons"
+        android:text="Agregar en otro momento"
+        android:layout_weight="1"
+        />
+
+
+</LinearLayout>
+
+</LinearLayout>

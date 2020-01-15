@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.elisoft.radiomovilclasico.Reservar_movil"
+    tools:showIn="@layout/activity_reservar_movil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5sp"
+        android:paddingRight="5sp"
+        android:paddingLeft="5sp"
+        android:background="@drawable/presentacion"
+        >
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Referencia:"
+            android:textColor="@color/colorPrimary_text"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100sp"
+            android:text=""
+            android:hint="Introduzca un descripción de referencia."
+            android:id="@+id/et_referencia"
+            android:inputType="text|textMultiLine"
+            android:gravity="top"
+            android:textColorHint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary_text"
+
+            />
+        <CheckBox
+            android:id="@+id/cb_tipo_pedido_empresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SOLICITUD CORPORATIVA"
+            android:textColor="@color/colorPrimary_text"
+            android:layout_marginBottom="5sp"
+            />
+        <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Fecha "
+        style="@style/submit2"
+        android:background="@color/colorReserva"
+        android:id="@+id/bt_fecha"
+        android:layout_marginBottom="5sp"
+            android:drawableLeft="@mipmap/ic_fecha"
+        />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HORA "
+            style="@style/submit2"
+            android:background="@color/colorReserva"
+            android:id="@+id/bt_hora"
+            android:layout_marginBottom="15sp"
+            android:drawableLeft="@mipmap/ic_hora"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CANCELAR"
+            style="@style/submit3"
+            android:id="@+id/bt_cancelar"
+            android:layout_margin="1sp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CONFIRMAR"
+            style="@style/submit2"
+            android:id="@+id/bt_pedir"
+            android:layout_margin="1sp"
+            />
+
+    </LinearLayout>
+</FrameLayout>

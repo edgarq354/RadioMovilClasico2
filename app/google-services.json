@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "364866900480",
+    "firebase_url": "https://radio-movil-clasico.firebaseio.com",
+    "project_id": "radio-movil-clasico",
+    "storage_bucket": "radio-movil-clasico.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364866900480:android:07cc30d314c4af12",
+        "android_client_info": {
+          "package_name": "com.elisoft.radiomovilclasico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364866900480-qesp2su1hsqq1j9fis8rja2g5fmh824n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAcd_cF_mg-QjkA49j0RhIDwXc0yUKMKk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
