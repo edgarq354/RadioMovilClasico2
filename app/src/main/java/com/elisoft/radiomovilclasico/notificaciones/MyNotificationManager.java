@@ -94,6 +94,7 @@ public class MyNotificationManager {
 
     public void notificacion(String title, String message, Intent intent) {
 
+        Uri sonido = Uri.parse("android.resource://"+ this.mCtx.getPackageName() + "/" + R.raw.notificacion);//sonido
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(mCtx);
         NotificationManager notificationManager = (NotificationManager) mCtx.getSystemService(Context.NOTIFICATION_SERVICE);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -107,7 +108,7 @@ public class MyNotificationManager {
         mBuilder.setContentTitle(title)
                 .setContentText(message)
                 .setAutoCancel(false)
-                .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
+                .setSound(sonido)
                 .setContentIntent(pintent);
 
 
