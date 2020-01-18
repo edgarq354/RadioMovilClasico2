@@ -1,14 +1,12 @@
 package com.elisoft.radiomovilclasico.registro_inicio_sesion;
 
 import android.Manifest;
-import android.content.ContentProviderOperation;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -16,15 +14,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.elisoft.radiomovilclasico.Constants;
 import com.elisoft.radiomovilclasico.Menu_usuario;
 import com.elisoft.radiomovilclasico.R;
-import com.elisoft.radiomovilclasico.Servicio_guardar_contacto_empresa;
 import com.elisoft.radiomovilclasico.informacion.Pagina;
-
-import java.util.ArrayList;
 
 public class Opcion_inicio_sesion extends AppCompatActivity {
 
@@ -102,9 +96,7 @@ public class Opcion_inicio_sesion extends AppCompatActivity {
                     finish();
                 }else{
                     //tiene todos los permisos...
-                    Intent intent = new Intent(this, Servicio_guardar_contacto_empresa.class);
-                    intent.setAction(Constants.ACTION_RUN_ISERVICE);
-                    startService(intent);
+
 
                 }
                 return;

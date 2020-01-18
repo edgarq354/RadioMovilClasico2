@@ -358,11 +358,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
 
         <service
-            android:name=".Servicio_guardar_contacto_empresa"
-            android:enabled="true"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <service
             android:name=".Servicio_guardar_contacto"
             android:enabled="true"
             android:exported="true"

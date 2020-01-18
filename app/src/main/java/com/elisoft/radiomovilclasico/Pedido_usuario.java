@@ -55,6 +55,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.elisoft.radiomovilclasico.Scanear.QR_conductor;
 import com.elisoft.radiomovilclasico.Scanear.QR_vehiculo;
 import com.elisoft.radiomovilclasico.SqLite.AdminSQLiteOpenHelper;
@@ -102,6 +109,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.spec.ECField;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallback , View.OnClickListener,GoogleApiClient.OnConnectionFailedListener,
         GoogleApiClient.ConnectionCallbacks,
@@ -318,8 +327,7 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
 
                 try {
                     int id_pedido= Integer.parseInt(prefe.getString("id_pedido",""));
-                    Servicio hilo_taxi = new Servicio();
-                    hilo_taxi.execute(getString(R.string.servidor) + "frmPedido.php?opcion=get_pedido_por_id_pedido", "5", String.valueOf(id_pedido));// parametro que recibe el doinbackground
+                   servicio_get_pedido_volley(id_pedido);
                 }catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -396,7 +404,125 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
 
     }
 
+    private void servicio_get_pedido_volley(int id_pedido) {
+        try {
 
+
+            JSONObject jsonParam= new JSONObject();
+            jsonParam.put("id_pedido", String.valueOf(id_pedido));
+
+            String url=getString(R.string.servidor) + "frmPedido.php?opcion=get_pedido_por_id_pedido";
+            RequestQueue queue = Volley.newRequestQueue(this);
+
+
+            JsonObjectRequest myRequest= new JsonObjectRequest(
+                    Request.Method.POST,
+                    url,
+                    jsonParam,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject respuestaJSON) {
+
+                            try {
+
+                                suceso= new Suceso(respuestaJSON.getString("suceso"),respuestaJSON.getString("mensaje"));
+
+                                if (suceso.getSuceso().equals("1")) {
+                                    JSONArray dato=respuestaJSON.getJSONArray("pedido");
+                                    String snombre=dato.getJSONObject(0).getString("nombre_taxi");
+                                    String scelular=dato.getJSONObject(0).getString("celular");
+                                    String sid_taxi=dato.getJSONObject(0).getString("id_taxi");
+                                    String smarca=dato.getJSONObject(0).getString("marca");
+                                    String splaca=dato.getJSONObject(0).getString("placa");
+                                    String scolor=dato.getJSONObject(0).getString("color");
+                                    String snumero_v=dato.getJSONObject(0).getString("numero_movil");
+                                    String sestado=dato.getJSONObject(0).getString("estado");
+                                    String sid_pedido=dato.getJSONObject(0).getString("id_pedido");
+                                    String sid_empresa=dato.getJSONObject(0).getString("id_empresa");
+                                    String sempresa=dato.getJSONObject(0).getString("empresa");
+
+
+                                    String scalificacion_conductor=dato.getJSONObject(0).getString("calificacion_conductor");
+                                    String scalificacion_vehiculo=dato.getJSONObject(0).getString("calificacion_vehiculo");
+
+                                    SharedPreferences pedido=getSharedPreferences("ultimo_pedido",MODE_PRIVATE);
+                                    SharedPreferences.Editor editar=pedido.edit();
+                                    editar.putString("nombre_taxi",snombre);
+                                    editar.putString("celular",scelular);
+                                    editar.putString("id_taxi",sid_taxi);
+                                    editar.putString("marca",smarca);
+                                    editar.putString("placa",splaca);
+                                    editar.putString("color",scolor);
+                                    editar.putString("numero_movil",snumero_v);
+                                    editar.putString("estado",sestado);
+                                    editar.putString("latitud",dato.getJSONObject(0).getString("latitud"));
+                                    editar.putString("longitud",dato.getJSONObject(0).getString("longitud"));
+                                    editar.putString("id_pedido",sid_pedido);
+                                    editar.putString("id_empresa",sid_empresa);
+                                    editar.putString("empresa",sempresa);
+                                    editar.putString("calificacion_conductor", scalificacion_conductor);
+                                    editar.putString("calificacion_vehiculo", scalificacion_vehiculo);
+                                    editar.commit();
+                                    //===========
+                                    //devuelve  8
+                                    //===========
+
+                                    SharedPreferences pedido2=getSharedPreferences("ultimo_pedido",MODE_PRIVATE);
+                                    tv_nombre.setText(pedido2.getString("nombre_taxi",""));
+                                    tv_marca.setText(pedido2.getString("marca",""));
+                                    tv_placa.setText(pedido2.getString("placa",""));
+                                    tv_color.setText(pedido2.getString("color",""));
+                                    tv_numero_movil.setText("Movil Nº:"+pedido2.getString("numero_movil","")+".");
+                                    getImage(pedido.getString("id_taxi",""));
+
+                                    try{
+                                        float conductor= Float.parseFloat(pedido.getString("calificacion_conductor","0"));
+                                        float vehiculo= Float.parseFloat(pedido.getString("calificacion_vehiculo","0"));
+                                        rb_calificacion_conductor.setRating(conductor);
+                                        rb_calificacion_vehiculo.setRating(vehiculo);
+                                    }catch (Exception e)
+                                    {
+                                    }
+
+                                }else if(suceso.getSuceso().equals("2"))
+                                {
+                                    mensaje(suceso.getMensaje());
+                                    finish();
+                                }
+                                else
+                                {
+                                    mensaje_error_final("Error: Al conectar con el Servidor.\nVerifique su acceso a Internet.");
+                                }
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                mensaje_error_final("Falla en tu conexión a Internet.");
+                            }
+
+                        }
+                    }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    mensaje_error_final("Falla en tu conexión a Internet.");
+                }
+            }
+            ){
+                public Map<String,String> getHeaders() throws AuthFailureError {
+                    Map<String,String> parametros= new HashMap<>();
+                    parametros.put("content-type","application/json; charset=utf-8");
+                    parametros.put("Authorization","apikey 849442df8f0536d66de700a73ebca-us17");
+                    parametros.put("Accept", "application/json");
+
+                    return  parametros;
+                }
+            };
+
+
+            queue.add(myRequest);
+
+
+        } catch (Exception e) {
+        }
+    }
 
 
     private void flotante_pedir(boolean b) {

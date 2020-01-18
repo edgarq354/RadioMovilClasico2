@@ -27,11 +27,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.elisoft.radiomovilclasico.Condiciones_terminos;
 import com.elisoft.radiomovilclasico.Constants;
 import com.elisoft.radiomovilclasico.Menu_usuario;
 import com.elisoft.radiomovilclasico.R;
-import com.elisoft.radiomovilclasico.Servicio_guardar_contacto_empresa;
 import com.elisoft.radiomovilclasico.Suceso;
 import com.elisoft.radiomovilclasico.informacion.Pagina;
 import com.elisoft.radiomovilclasico.notificaciones.SharedPrefManager;
@@ -289,9 +287,7 @@ public class Iniciar_sesion extends AppCompatActivity implements View.OnClickLis
                     finish();
                 }else{
                     //tiene todos los permisos...
-                    Intent intent = new Intent(Iniciar_sesion.this, Servicio_guardar_contacto_empresa.class);
-                    intent.setAction(Constants.ACTION_RUN_ISERVICE);
-                    startService(intent);
+
                 }
                 return;
             }

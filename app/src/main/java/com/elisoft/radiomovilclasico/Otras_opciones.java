@@ -176,9 +176,7 @@ public class Otras_opciones extends AppCompatActivity  implements View.OnClickLi
                 finish();
             }else{
                 //tiene todos los permisos...
-                Intent intent = new Intent(Otras_opciones.this, Servicio_guardar_contacto_empresa.class);
-                intent.setAction(Constants.ACTION_RUN_ISERVICE);
-                startService(intent);
+
             }
             return;
 

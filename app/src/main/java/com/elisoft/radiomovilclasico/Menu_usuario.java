@@ -2471,9 +2471,7 @@ SharedPreferences casa=getSharedPreferences(getString(R.string.direccion_casa),M
                 finish();
             }else{
                 //tiene todos los permisos...
-                Intent intent = new Intent(Menu_usuario.this, Servicio_guardar_contacto_empresa.class);
-                intent.setAction(Constants.ACTION_RUN_ISERVICE);
-                startService(intent);
+
             }
             return;
 
