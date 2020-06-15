@@ -321,12 +321,7 @@ public class Autenticar_celular extends AppCompatActivity implements View.OnClic
         if( s_nombre.toString().trim().length()>=3  && s_apellido.toString().trim().length()>=3) {
             final String token = SharedPrefManager.getInstance(this).getDeviceToken();
 
-            TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-            if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-                verificar_permiso_imei();
-            }else{
-                imei=telephonyManager.getDeviceId();
-            }
+
 
             if (token != null || token == "") {
                 if(ir_google==1){
@@ -935,40 +930,7 @@ public class Autenticar_celular extends AppCompatActivity implements View.OnClic
         }
     }
 
-    public void verificar_permiso_imei()
-    {
-        final String[] PERMISSIONS = { android.Manifest.permission.INTERNET,
-                android.Manifest.permission.READ_PHONE_STATE,
-                android.Manifest.permission.ACCESS_NETWORK_STATE };
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.READ_PHONE_STATE)) {
-            //YA LO CANCELE Y VOUELVO A PERDIR EL PERMISO.
-
-            AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-            dialogo1.setTitle("Atención!");
-            dialogo1.setMessage("Debes otorgar permisos de acceso al ID del Telefono por tema de Seguridad.");
-            dialogo1.setCancelable(false);
-            dialogo1.setPositiveButton("Solicitar permiso", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogo1, int id) {
-                    dialogo1.cancel();
-                    ActivityCompat.requestPermissions(Autenticar_celular.this,
-                            PERMISSIONS,
-                            1);
-                }
-            });
-            dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogo1, int id) {
-                    dialogo1.cancel();
-
-                }
-            });
-            dialogo1.show();
-        } else {
-            ActivityCompat.requestPermissions(Autenticar_celular.this,
-                    PERMISSIONS,
-                    1);
-        }
-    }
 
 
     public void verificar_todos_los_permisos()
