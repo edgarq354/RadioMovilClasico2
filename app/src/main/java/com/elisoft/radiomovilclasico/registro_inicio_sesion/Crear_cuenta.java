@@ -304,12 +304,7 @@ public class Crear_cuenta extends AppCompatActivity implements View.OnClickListe
         if( s_nombre.toString().trim().length()>=3  && s_apellido.toString().trim().length()>=3) {
             final String token = SharedPrefManager.getInstance(this).getDeviceToken();
 
-            TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-                verificar_permiso_imei();
-            }else{
-                imei=telephonyManager.getDeviceId();
-            }
+
 
             if (token != null || token == "") {
                 if(ir_google==1){
@@ -343,11 +338,7 @@ public class Crear_cuenta extends AppCompatActivity implements View.OnClickListe
         if(v.getId()==R.id.iniciar_sesion)
         {
 
-            TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-                verificar_permiso_imei();
-            }else{
-                imei=telephonyManager.getDeviceId();
+
                 String token= SharedPrefManager.getInstance(this).getDeviceToken();
                 if(token!=null|| token=="")
                 {
@@ -359,9 +350,6 @@ public class Crear_cuenta extends AppCompatActivity implements View.OnClickListe
                 {
                     mensaje_error("No se a podido generar el Token. porfavor active sus datos de Red e instale Google Pay Service");
                 }
-            }
-
-
 
 
         }else if(v.getId()==R.id.tv_registrate) {
@@ -959,40 +947,7 @@ public class Crear_cuenta extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void verificar_permiso_imei()
-    {
-        final String[] PERMISSIONS = { Manifest.permission.INTERNET,
-                Manifest.permission.READ_PHONE_STATE,
-                Manifest.permission.ACCESS_NETWORK_STATE };
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_PHONE_STATE)) {
-            //YA LO CANCELE Y VOUELVO A PERDIR EL PERMISO.
-
-            AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-            dialogo1.setTitle("Atención!");
-            dialogo1.setMessage("Debes otorgar permisos de acceso al ID del Telefono por tema de Seguridad.");
-            dialogo1.setCancelable(false);
-            dialogo1.setPositiveButton("Solicitar permiso", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogo1, int id) {
-                    dialogo1.cancel();
-                    ActivityCompat.requestPermissions(Crear_cuenta.this,
-                            PERMISSIONS,
-                            1);
-                }
-            });
-            dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogo1, int id) {
-                    dialogo1.cancel();
-
-                }
-            });
-            dialogo1.show();
-        } else {
-            ActivityCompat.requestPermissions(Crear_cuenta.this,
-                    PERMISSIONS,
-                    1);
-        }
-    }
 
 
     public void verificar_todos_los_permisos()

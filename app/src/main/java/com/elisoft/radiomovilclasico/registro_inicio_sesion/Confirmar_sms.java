@@ -198,12 +198,7 @@ public class Confirmar_sms extends AppCompatActivity implements View.OnClickList
     {
         token = SharedPrefManager.getInstance(getApplicationContext()).getDeviceToken();
 
-        TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
-        if (ActivityCompat.checkSelfPermission(Confirmar_sms.this, android.Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
-            verificar_permiso_imei();
-        }else{
-            imei=telephonyManager.getDeviceId();
-        }
+
 
         if (token != null && token != "") {
 
@@ -654,41 +649,7 @@ public class Confirmar_sms extends AppCompatActivity implements View.OnClickList
         builder.show();
     }
 
-    public void verificar_permiso_imei()
-    {
-        final String[] PERMISSIONS = { android.Manifest.permission.INTERNET,
-                android.Manifest.permission.READ_PHONE_STATE,
-                android.Manifest.permission.ACCESS_NETWORK_STATE };
 
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.READ_PHONE_STATE)) {
-            //YA LO CANCELE Y VOUELVO A PERDIR EL PERMISO.
-
-            AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
-            dialogo1.setTitle("Atención!");
-            dialogo1.setMessage("Debes otorgar permisos de acceso al ID del Telefono por tema de Seguridad.");
-            dialogo1.setCancelable(false);
-            dialogo1.setPositiveButton("Solicitar permiso", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogo1, int id) {
-                    dialogo1.cancel();
-                    ActivityCompat.requestPermissions(Confirmar_sms.this,
-                            PERMISSIONS,
-                            1);
-
-                }
-            });
-            dialogo1.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialogo1, int id) {
-                    dialogo1.cancel();
-
-                }
-            });
-            dialogo1.show();
-        } else {
-            ActivityCompat.requestPermissions(Confirmar_sms.this,
-                    PERMISSIONS,
-                    1);
-        }
-    }
 
 
 }
