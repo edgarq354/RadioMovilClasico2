@@ -207,7 +207,7 @@ public class Confirmar_sms extends AppCompatActivity implements View.OnClickList
         }
         else
         {
-            AlertDialog.Builder dialogo1 = new AlertDialog.Builder(getApplicationContext());
+            AlertDialog.Builder dialogo1 = new AlertDialog.Builder(Confirmar_sms.this);
             dialogo1.setTitle("Vamos a verificar el número de telefono");
             dialogo1.setMessage("No tiene token de acceso.  \n por favor vuelva a intentar mas tarde. \n para generar el Token ncesita tener instalado el Google Play Service.");
             dialogo1.setCancelable(false);
