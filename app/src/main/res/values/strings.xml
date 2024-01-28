@@ -7,8 +7,8 @@
     <string name="title_activity_menu_movil">Menu_movil</string>
     <string name="title_activity_registrar_usuario">Registrar_usuario</string>
 
-    <string name="servidor_web">http://35.227.27.175:80/clasico/</string>
-    <string name="servidor">http://35.227.27.175:80/clasico2/</string>
+    <string name="servidor_web">http://165.227.205.146/clasico/</string>
+    <string name="servidor">http://165.227.205.146/clasico-2021/clasico2/</string>
     <string name="title_activity_historial_pedido">Map</string>
     <string name="title_activity_notificacion_pedido_movil">Map</string>
     <string name="title_activity_main">MainActivity</string>

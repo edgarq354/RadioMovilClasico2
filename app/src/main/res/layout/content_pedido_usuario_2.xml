@@ -69,12 +69,13 @@
                 >
 
                 <Button
+                    android:id="@+id/bt_cancelar"
+                    style="@style/submit3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Cancelar"
-                    android:id="@+id/bt_cancelar"
                     android:layout_weight="1"
-                    style="@style/submit3" />
+                    android:text="Cancelar"
+                    tools:ignore="DuplicateClickableBoundsCheck" />
 
             </LinearLayout>
         </LinearLayout>
@@ -97,14 +98,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
+
                 <ImageButton
-                    android:layout_width="50sp"
-                    style="@style/submit2"
-                    android:layout_height="match_parent"
-                    android:src="@mipmap/ic_empresa"
                     android:id="@+id/bt_contacto_empresa"
+                    style="@style/submit2"
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
                     android:layout_margin="0sp"
-                    />
+                    android:contentDescription=""
+                    android:hint=""
+                    android:src="@mipmap/ic_empresa"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -115,6 +119,7 @@
                     android:textSize="20sp"
                     android:id="@+id/tv_titulo"
                     android:layout_weight="1"
+                    android:contentDescription=""
                     />
 
                 <ImageButton
@@ -122,11 +127,13 @@
                     style="@style/submit2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_margin="0sp"
+                    android:contentDescription=""
                     android:gravity="right"
                     android:paddingLeft="5sp"
                     android:paddingRight="5sp"
-                    android:layout_margin="0sp"
-                    android:src="@mipmap/conectar_conductor" />
+                    android:src="@mipmap/conectar_conductor"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </LinearLayout>
         </android.support.v7.widget.Toolbar>
 

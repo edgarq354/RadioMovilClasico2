@@ -11,31 +11,81 @@
     android:background="#d5000000"
     tools:showIn="@layout/activity_pedido_usuario_2">
 
+<ListView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lv_ofertas"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscando Taxi . . ."
-        android:textColor="#fff"
-        android:textSize="20sp"
-        android:padding="25sp"
-        android:layout_marginTop="25sp"
-        android:id="@+id/tv_mensaje_pedido"
-        />
-    <ImageView
+
+   <!-- <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/radar2"
         android:id="@+id/im_rodar_pedido"
         android:layout_gravity="center"
-        />
+        />-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_gravity="center"
+        app:lottie_rawRes="@raw/radar" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="bottom"
+    android:background="#000"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:text="Ofreciendo tu Precio"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/bt_bajar_precio"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#fff"
+            android:id="@+id/tv_precio_vista"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="BOB 0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/bt_subir_precio"
+            />
+
+    </LinearLayout>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/submit2"
+        android:text="Aumentar Tarifa"
+        android:id="@+id/bt_aumentar_tarifa"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/submit3"
         android:text="CANCELAR"
-        android:layout_gravity="bottom"
         android:id="@+id/bt_cancelar_pedido"
         />
+</LinearLayout>
+
 
 </FrameLayout>

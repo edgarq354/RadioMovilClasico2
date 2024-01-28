@@ -73,8 +73,8 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
 
     CheckBox cb_tipo_pedido_empresa;
 
-    TextView tv_monto_distancia,tv_monto_tiempo,tv_tarifa_normal,tv_tarifa_de_lujo,tv_tarifa_con_aire,tv_tarifa_maletero,tv_tarifa_con_pedido, tv_tarifa_con_reserva,tv_tarifa_moto,tv_tarifa_moto_pedido;
-
+    TextView tv_monto_distancia,tv_monto_tiempo,tv_tarifa_de_lujo,tv_tarifa_con_aire,tv_tarifa_maletero,tv_tarifa_con_pedido, tv_tarifa_con_reserva,tv_tarifa_moto,tv_tarifa_moto_pedido;
+    EditText tv_tarifa_normal;
     TextView tv_billetera;
 
 
@@ -115,7 +115,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
         tv_punto_fin=(TextView)findViewById(R.id.tv_punto_final);
         tv_monto_distancia=(TextView)findViewById(R.id.tv_monto_distancia);
         tv_monto_tiempo=(TextView)findViewById(R.id.tv_monto_tiempo);
-        tv_tarifa_normal=(TextView)findViewById(R.id.tv_tarifa_normal);
+        tv_tarifa_normal=(EditText)findViewById(R.id.tv_tarifa_normal);
         tv_tarifa_de_lujo=(TextView)findViewById(R.id.tv_tarifa_de_lujo);
         tv_tarifa_con_aire=(TextView)findViewById(R.id.tv_tarifa_con_aire);
         tv_tarifa_maletero=(TextView)findViewById(R.id.tv_tarifa_maletero);
@@ -340,24 +340,26 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                     {
                     descuento=monto_normal-monto_billetera;
                     }
-                    tv_tarifa_normal.setText(descuento+" BOB");
+                    tv_tarifa_normal.setText(descuento+"");
 
                 }else
                 {
-                    tv_tarifa_normal.setText(monto_normal+" BOB");
+                    tv_tarifa_normal.setText(monto_normal+"");
                 }
 
                 break;
             case R.id.pedir_movil:
-
+                int montoTarifa=0;
                 //solicita un movil de cualquier caracteristica.
-
-
-
-
 
                     if(existe_celular()==true)
                     {
+
+                        try{
+                            montoTarifa= Integer.parseInt(tv_tarifa_normal.getText().toString());
+                        }catch (Exception e){
+                            montoTarifa=0;
+                        }
 
                         try{
                             lat_1=latitud_inicio;
@@ -366,12 +368,23 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                             lat_1=0;
                             lon_1=0;
                         }
-                        if(lat_1!=0&& lon_1!=0){
-                            escribir_referencia(1,0,"Solicitando un movil");
+                        if(montoTarifa>0){
+                            if(lat_1!=0&& lon_1!=0){
+                                getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+                                pedir_taxi("0", "Solicitando un movil",1,0,montoTarifa);
+                                //escribir_referencia(1,0,"Solicitando un movil",montoTarifa);
+                            }else{
+                                AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
+                                dialogo1.setTitle("Atención");
+                                dialogo1.setMessage("Por favor geolocalice su ubicación.");
+                                dialogo1.setCancelable(false);
+                                dialogo1.setPositiveButton("OK", null);
+                                dialogo1.show();
+                            }
                         }else{
                             AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
                             dialogo1.setTitle("Atención");
-                            dialogo1.setMessage("Por favor geolocalice su ubicación.");
+                            dialogo1.setMessage("Ofrezca un monto de tarifa.");
                             dialogo1.setCancelable(false);
                             dialogo1.setPositiveButton("OK", null);
                             dialogo1.show();
@@ -398,7 +411,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                             lon_1=0;
                         }
                         if(lat_1!=0&& lon_1!=0){
-                            escribir_referencia(3,0,"Solicitando un movil con aire acondicionado");
+                            escribir_referencia(3,0,"Solicitando un movil con aire acondicionado",0);
                         }else{
                             AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
                             dialogo1.setTitle("Atención");
@@ -428,7 +441,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                             lon_1=0;
                         }
                         if(lat_1!=0&& lon_1!=0){
-                            escribir_referencia(4,0,"Solicitando un movil con maletero");
+                            escribir_referencia(4,0,"Solicitando un movil con maletero",0);
                         }else{
                             AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
                             dialogo1.setTitle("Atención");
@@ -447,7 +460,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
     }
 
 
-    public void  escribir_referencia(final int clase_vehiculo,final int tipo_pedido_empresa,String tipo_pedido_texto)
+    public void  escribir_referencia(final int clase_vehiculo,final int tipo_pedido_empresa,String tipo_pedido_texto,int montoTarifa)
     {
 
         // get prompts.xml view
@@ -481,7 +494,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                 editar.commit();
 
                 getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
-                pedir_taxi("0", et_referencia.getText().toString().trim(),clase_vehiculo,tipo_pedido_empresa);
+                pedir_taxi("0", et_referencia.getText().toString().trim(),clase_vehiculo,tipo_pedido_empresa,0);
                 alert2.cancel();
 
             }
@@ -512,7 +525,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
         alert = builder.create();
         alert.show();
     }
-    public void pedir_taxi(String numero, String referencia, int clase_vehiculo, int tipo_pedido_empresa){
+    public void pedir_taxi(String numero, String referencia, int clase_vehiculo, int tipo_pedido_empresa,int montoTarifa){
         ///verifica si el GPS esta activo.
         if ( !manager.isProviderEnabled( LocationManager.GPS_PROVIDER ) ) {
             AlertNoGps();
@@ -539,6 +552,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                     datos_pedido.putExtra("direccion_final",tv_punto_fin.getText().toString());
                     datos_pedido.putExtra("tipo_pedido_empresa",tipo_pedido_empresa);
                     datos_pedido.putExtra("estado_billetera",billetera);
+                    datos_pedido.putExtra("monto_tarifa",montoTarifa);
                     startActivity(datos_pedido);
                 } else {
                     AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
@@ -712,7 +726,7 @@ public class Calcular_tarifa_confirmar extends AppCompatActivity implements OnMa
                 tv_monto_tiempo.setText("Hrs. "+ formatearMinutosAHoraMinuto(minuto1));
                 
                 tv_monto_tiempo.setText("Hrs. "+ formatearMinutosAHoraMinuto(minuto1));
-                tv_tarifa_normal.setText(  normal+" BOB");
+                tv_tarifa_normal.setText(  normal+"");
                 tv_tarifa_de_lujo.setText("Bs. "+ de_lujo);
                 tv_tarifa_con_aire.setText("Bs. "+ con_aire);
                 tv_tarifa_maletero.setText("Bs. "+ maletero);

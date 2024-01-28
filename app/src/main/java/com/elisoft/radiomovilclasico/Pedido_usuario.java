@@ -181,6 +181,8 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
     String direccion_final="";
     String estado_billetera="0";
 
+    int montoTarifa=0;
+
     @Override
     public void onBackPressed() {
         ll_perfil.setVisibility(View.INVISIBLE);
@@ -270,7 +272,7 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
         ll_flotante=(LinearLayout)findViewById(R.id.ll_flotante);
         ll_cancelar=(LinearLayout)findViewById(R.id.ll_cancelar);
         tv_mensaje_pedido=(TextView)findViewById(R.id.tv_mensaje_pedido);
-        im_rodar_pedido=(ImageView)findViewById(R.id.im_rodar_pedido);
+        //im_rodar_pedido=(ImageView)findViewById(R.id.im_rodar_pedido);
         bt_cancelar_pedido=(Button)findViewById(R.id.bt_cancelar_pedido);
         bt_ver_perfil=(Button)findViewById(R.id.bt_ver_perfil);
         tv_nombre=(TextView)findViewById(R.id.tv_nombre);
@@ -312,6 +314,7 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
             clase_vehiculo=bundle.getInt("clase_vehiculo",1);
             tipo_pedido_empresa=bundle.getInt("tipo_pedido_empresa",0);
             estado_billetera=bundle.getString("estado_billetera","0");
+            montoTarifa=bundle.getInt("monto_tarifa",0);
 
             try{
                 numero_casa= Integer.parseInt(bundle.getString("numero","0"));
@@ -533,7 +536,7 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
             ll_flotante.setVisibility(View.VISIBLE);
 
             giro.reset();
-            im_rodar_pedido.startAnimation(giro);
+            //im_rodar_pedido.startAnimation(giro);
             ll_perfil.setVisibility(View.INVISIBLE);
             bt_cancelar.setEnabled(false);
             bt_ver_perfil.setVisibility(View.INVISIBLE);
@@ -1066,7 +1069,8 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
                     direccion,
                     String.valueOf(latitud_final),
                     String.valueOf(longitud_final),
-                    estado_billetera
+                    estado_billetera,
+                    String.valueOf(montoTarifa)
                     );// parametro que recibe el doinbackground
 
 
@@ -1289,6 +1293,7 @@ public class Pedido_usuario extends AppCompatActivity implements OnMapReadyCallb
                         jsonParam.put("longitud_final", params[13]);
                         jsonParam.put("direccion_final", direccion_final);
                         jsonParam.put("estado_billetera",  params[14]);
+                        jsonParam.put("monto_tarifa",  params[15]);
                         //Envio los prametro por metodo post
                         OutputStream os = urlConn.getOutputStream();
                         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(os, "UTF-8"));
